@@ -18,10 +18,11 @@ function pull(){
     var queryURL= "https://api.yelp.com/v3/businesses/search?term=tattoos&latitude=35.1168&longitude=-80.7237"
     $.ajax({
       header: {
-          Authorization: "Bearer pggyYPUFjKRZwKGVB3XiuwMO0wrXgQxau8y3DZW7geuRWY4AgHMklAati700_uZcpaX7LA92bSIxf8YgoYZpI4VBB1dVtoGUgTivNlASsTnoL8Nr1ZxNM90NNSP1XHYx",    
+          'Authorization': "Bearer pggyYPUFjKRZwKGVB3XiuwMO0wrXgQxau8y3DZW7geuRWY4AgHMklAati700_uZcpaX7LA92bSIxf8YgoYZpI4VBB1dVtoGUgTivNlASsTnoL8Nr1ZxNM90NNSP1XHYx",
+          'Access-Control-Allow-Origin': '*',
       },
       url:queryURL,
-      method:"GET"
+      method:"GET",
   }).then(function(response){
       console.log(response)
   })
